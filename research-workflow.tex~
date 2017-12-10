@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\title{Research Workflow}
+\author{Jawad Khan}
+\date{December 10 2017}
+
+% Define block styles
+\tikzstyle{rectangle}
+\tikzstyle{rounded corners}
+\tikzstyle{ellipse}
+
+\begin{document}
+\end{document}
+
