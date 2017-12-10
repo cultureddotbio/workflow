@@ -8,7 +8,7 @@
 \date{December 10 2017}
 
 % Define block styles
-\tikzstyle{topic} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+\tikzstyle{question} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
 \tikzstyle{decision} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
 \tikzstyle{choice} = [ellipse, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
@@ -16,8 +16,25 @@
 \begin{document}
 \begin{tikzpicture}[node distance=2cm]
 
-\node (top1) [topic] {Clean Meat};
-  
+\node (que1) [question] {Clean Meat?};
+\node (dec1) [decision, below of=top1] {Top Research};
+\node (cho1a) [choice, below left of=dec1] {Angiogenesis};
+\node (cho1b) [choice, below of=dec1] {Media};
+\node (cho1c) [choice, below right of=dec1] {Cell Type};
+\node (cho1d) [choice, right of=dec1] {Bioreactor};
+\node (cho2a) [choice, below right of=cho1b] {Basal Media};
+\node (cho2b) [choice, below of=cho1b] {Serum};
+\node (cho2c) [choice, below left of=cho1b] {Serum-free Media};
+\node (dec2) [decision, below of=cho2c] {Down Research};
+\node (dec3) [decision, below of=dec2] {Serum-free media is not effective in cell growth};
+\node (que2) [question, below right of=dec3] {Question: What substrate improves cell growth?};
+\node (dec4) [decision, below left of=que2] {Process in maching Serum-free media};
+\node (cho3a) [choice, below left of=dec4] {Add Constituents};
+\node (cho3b) [choice, below of=dec4] {Remove Constituents};
+\node (cho3c) [choice, below right of=dec4] {Alter Constituents};
+\node (que3) [question, below right of=cho3a] {If albumin is added in media then cells will grow faster because albumin carries nutrients into cells.};
+\node (dec5) [decision, below of=que3] {Experiment};
+
 \end{tikzpicture}
 \end{document}
 
